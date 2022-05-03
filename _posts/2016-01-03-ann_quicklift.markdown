@@ -61,7 +61,7 @@ The second is used to register a new user account, returning either a text error
 The third is used to log a user in, and returns an `AuthResponse` if the login was successful.
 `verify` is used to get the user account information for a given authentication token.
 
-I've used some Template Haskell [as documented in this tutorial](http://www.parsonsmatt.org/2015/11/15/template_haskell.html) to make the Users code available in my `AppM` monad, so `getUsers` is just:
+I've used some Template Haskell [as documented in this tutorial](http://www.overcoming.software/2015/11/15/template_haskell.html) to make the Users code available in my `AppM` monad, so `getUsers` is just:
 
 ```haskell
 -- Get '[JSON] [Person]
@@ -241,7 +241,7 @@ PureScript also has a really good router, which Elm and GHCJS didn't really have
 Routers are important for making SPAs useful and not counterintuitive -- the back button is your friend, and URLs are what makes the web great.
 
 I'm using [Halogen](https://github.com/slamdata/purescript-halogen), which is a *beast* of a library.
-I'm going to briefly cover the architecture and design, but you'll want to refer to my [Elm Architecture in PureScript](http://www.parsonsmatt.org/2015/10/05/elm_vs_purescript_ii.html) series, the [official introduction](https://github.com/slamdata/purescript-halogen#introduction), and the [excellent set of examples](https://github.com/slamdata/purescript-halogen/tree/master/examples) if you want to know what's going on in more depth.
+I'm going to briefly cover the architecture and design, but you'll want to refer to my [Elm Architecture in PureScript](http://www.overcoming.software/2015/10/05/elm_vs_purescript_ii.html) series, the [official introduction](https://github.com/slamdata/purescript-halogen#introduction), and the [excellent set of examples](https://github.com/slamdata/purescript-halogen/tree/master/examples) if you want to know what's going on in more depth.
 
 ### Note to the future:
 
@@ -277,7 +277,7 @@ The router is the next interesting bit of the application.
 
 ## `Router.purs`
 
-I wrote [an introductory tutorial](http://www.parsonsmatt.org/2015/10/22/purescript_router.html) on using `purescript-routing` with `purescript-halogen`.
+I wrote [an introductory tutorial](http://www.overcoming.software/2015/10/22/purescript_router.html) on using `purescript-routing` with `purescript-halogen`.
 If you're wanting more detail, check that out.
 I'll briefly cover the main differences here.
 

@@ -150,6 +150,6 @@ Elm's quite a bit simpler, but we'll see how PureScript's more powerful language
 ### Other posts in this series:
 
 
-1. [Elm vs PureScript II](http://www.parsonsmatt.org/2015/10/05/elm_vs_purescript_ii.html)
-2. [Elm Architecture in PureScript III: Dynamic Lists of Counters](http://www.parsonsmatt.org/2015/10/10/elm_architecture_in_purescript_iii.html)
-3. [Elm Architecture in PureScript IV: Effects](http://www.parsonsmatt.org/2015/10/11/elm_architecture_in_purescript_iv_effects.html)
+1. [Elm vs PureScript II](http://www.overcoming.software/2015/10/05/elm_vs_purescript_ii.html)
+2. [Elm Architecture in PureScript III: Dynamic Lists of Counters](http://www.overcoming.software/2015/10/10/elm_architecture_in_purescript_iii.html)
+3. [Elm Architecture in PureScript IV: Effects](http://www.overcoming.software/2015/10/11/elm_architecture_in_purescript_iv_effects.html)

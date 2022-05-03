@@ -21,7 +21,7 @@ If you're too impatient to read the walkthrough, the complete repository is [on 
 # `servant-persistent`
 
 Since we'll be using this package as our API, you may want to read a bit about it. 
-I wrote a post describing the project and how it's used [here](http://www.parsonsmatt.org/2016/07/08/servant-persistent_updated.html).
+I wrote a post describing the project and how it's used [here](http://www.overcoming.software/2016/07/08/servant-persistent_updated.html).
 
 # Start your Yesods
 

@@ -124,7 +124,7 @@ Many `Q` features are not supported in `IO`, and it's difficult to accurately be
 In the above example, GHC spends a tiny amount of time generating code, and then spends a *huge* amount of time compiling it.
 What's going on?
 
-In [Keeping Compilation Fast](https://www.parsonsmatt.org/2019/11/27/keeping_compilation_fast.html), I write that GHC compiles modules superlinearly in the size of the module.
+In [Keeping Compilation Fast](https://www.overcoming.software/2019/11/27/keeping_compilation_fast.html), I write that GHC compiles modules superlinearly in the size of the module.
 That means that large modules take longer to compile than the same amount of code split up over several modules.
 `TemplateHaskell` has no way of creating *modules*, or even altering the imports/exports of a given module, and so it necessarily might run into this problem.
 
@@ -132,7 +132,7 @@ We have two means of reducing generated code: spreading the use over multiple mo
 
 ## Fewer Calls to TH
 
-In [Splitting Persistent Models](https://www.parsonsmatt.org/2019/12/06/splitting_persistent_models.html), I wrote how to speed up compile-times by isolating the `persistent` model definitions into separate modules.
+In [Splitting Persistent Models](https://www.overcoming.software/2019/12/06/splitting_persistent_models.html), I wrote how to speed up compile-times by isolating the `persistent` model definitions into separate modules.
 This results in many smaller modules, which GHC can compile much faster - in part because the modules are able to parallelized, and in part because they are smaller, and don't hit the superlinearity.
 
 You can do this with any other thing, too. 

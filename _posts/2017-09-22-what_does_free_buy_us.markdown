@@ -768,4 +768,4 @@ To tame that complexity, we factored the "what to do next" back out into a new d
 `Free` and `List` are similar; and we can use `Free` to write `List` and other interesting data structures.
 The only requirement that `Free` has to give a monad to the whole type is that the `f` type parameter be a `Functor`.
 
-I did a similar dive into recursive types in [Recursion Excursion](http://www.parsonsmatt.org/2015/09/24/recursion.html), which you may find interesting.
+I did a similar dive into recursive types in [Recursion Excursion](http://www.overcoming.software/2015/09/24/recursion.html), which you may find interesting.

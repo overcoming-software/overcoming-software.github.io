@@ -7,7 +7,7 @@ categories: programming
 
 ## Dynamic Lists of Counters
 
-On the [last post](http://www.parsonsmatt.org/2015/10/05/elm_vs_purescript_ii.html), we implemented a pair of counters.
+On the [last post](http://www.overcoming.software/2015/10/05/elm_vs_purescript_ii.html), we implemented a pair of counters.
 Now, we'll generalize that out to a dynamic list of counters, and later, give them all remove buttons.
 In the process, we'll learn how to combine components, stack them, peek on them, and otherwise deal with them appropriately.
 
