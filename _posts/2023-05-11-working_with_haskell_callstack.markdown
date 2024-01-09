@@ -116,7 +116,7 @@ withFrozenCallStack :: HasCallStack => (HasCallStack => a) -> a
 ```
 
 This function freezes the `CallStack` for the *argument* of the function.
-This is useful if you want to provide a wrapper around a function that manipulates or reports on the `CallStack` in some way, but you don't want that poluting any other `CallStack`.
+This is useful if you want to provide a wrapper around a function that manipulates or reports on the `CallStack` in some way, but you don't want that polluting any other `CallStack`.
 
 Let's call that before `getSrcLoc` and see what happens.
 
@@ -510,3 +510,5 @@ I've mentioned [`annotated-exception`](https://hackage.haskell.org/package/annot
 This library extends the `CallStack` machinery to any exception that is thrown by the library or passes through an exception handler.
 Additionally, you can provide additional metadata information on your exceptions, which makes debugging them much more useful.
 You can now transparently add, say, the logged in user ID to every single exception that gets thrown in a code block.
+
+The source code for this blog post is available [at this GitHub repository](https://github.com/parsonsmatt/callstack-examples).

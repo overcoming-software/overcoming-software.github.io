@@ -258,7 +258,7 @@ A final `mkEnv` call could even put it behind a `newtype` wrapper, or a similar 
 The boilerplate sucks, but would be easy to `TemplateHaskell` away.
 
 Can `OverloadedRecordDot` help us here?
-With some of the tricks in [Stealing `impl` From Rust](https://www.overcoming.software/2021/07/29/stealing_impl_from_rust.html), sort of.
+With some of the tricks in [Stealing `impl` From Rust](https://www.parsonsmatt.org/2021/07/29/stealing_impl_from_rust.html), sort of.
 We can write simple setters:
 
 ```haskell

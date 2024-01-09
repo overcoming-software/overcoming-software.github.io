@@ -7,7 +7,7 @@ categories: programming
 
 The question of "How do I design my application in Haskell?" comes up a lot.
 There's a bunch of perspectives and choices, so it makes sense that it's difficult to choose just one.
-Do I use plain monad transformers, `mtl`, just pass the parameters manually and use `IO` for everything, the [`ReaderT` design pattern](https://www.fpcomplete.com/blog/2017/06/readert-design-pattern), [free monads](http://www.overcoming.software/2017/09/22/what_does_free_buy_us.html), free*r* monads, some other kind of algebraic effect system?!
+Do I use plain monad transformers, `mtl`, just pass the parameters manually and use `IO` for everything, the [`ReaderT` design pattern](https://www.fpcomplete.com/blog/2017/06/readert-design-pattern), [free monads](http://www.parsonsmatt.org/2017/09/22/what_does_free_buy_us.html), free*r* monads, some other kind of algebraic effect system?!
 
 The answer is: why not both/all?
 Each approach has pros and cons.
@@ -26,7 +26,7 @@ newtype AppT m a
 The  [`ReaderT` Design Pattern](https://www.fpcomplete.com/blog/2017/06/readert-design-pattern), essentially.
 This is what everything gets boiled down to, and what everything eventually gets interpreted in.
 This type is the backbone of your app.
-For some components, you carry around some info/state (consider [`MonadMetrics`](https://hackage.haskell.org/package/monad-metrics) or  [`katip`'s](https://hackage.haskell.org/package/katip-0.5.2.0/docs/Katip.html) logging state/data); for others, you can carry [an explicit effect interpreter](http://www.overcoming.software/2016/07/14/rank_n_classy_limited_effects.html).
+For some components, you carry around some info/state (consider [`MonadMetrics`](https://hackage.haskell.org/package/monad-metrics) or  [`katip`'s](https://hackage.haskell.org/package/katip-0.5.2.0/docs/Katip.html) logging state/data); for others, you can carry [an explicit effect interpreter](http://www.parsonsmatt.org/2016/07/14/rank_n_classy_limited_effects.html).
 This layer is for defining how the upper layers work, and for handling operational concerns like performance, concurrency, etc.
 
 At IOHK, we had a name for this kind of thing: a "capability".
@@ -40,7 +40,7 @@ You want this layer to be tiny.
 If you get a request to test something in this layer, don't - factor the logic out, test *that* function, and call it in IO.
 
 How do you shift something out?
-I wrote a post on [Inverting your Mocks](http://www.overcoming.software/2017/07/27/inverted_mocking.html) that I believe covers it well, but the general routine is:
+I wrote a post on [Inverting your Mocks](http://www.parsonsmatt.org/2017/07/27/inverted_mocking.html) that I believe covers it well, but the general routine is:
 
 - Factor the *inputs* of code out
 - Represent the *output* of effects as data returned from pure functions
@@ -154,7 +154,7 @@ This should almost always just be pure functions and relatively simple data type
 Reach for *only* as much power as you need -- and you need much less than you think!
 
 All the effectful data should have been acquired beforehand, and all effectful post-processing should be handled afterwards.
-My post on [inverting your mocks](http://www.overcoming.software/2017/07/27/inverted_mocking.html) goes into detail on ways to handle this.
+My post on [inverting your mocks](http://www.parsonsmatt.org/2017/07/27/inverted_mocking.html) goes into detail on ways to handle this.
 If you need streaming, then you can implement "pure" `conduit` or `pipe`s with a type signature like this:
 
 ```haskell
@@ -204,3 +204,4 @@ Fortunately, other folks have!
 
 - [Holmusk/three-layer](https://github.com/Holmusk/three-layer)
 - [thomashoneyman/purescript-halogen-realworld](https://github.com/thomashoneyman/purescript-halogen-realworld)
+- [defect-process](https://github.com/incoherentsoftware/defect-process) is a 62kloc Haskell video game project
