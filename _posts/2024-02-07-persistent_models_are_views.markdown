@@ -53,7 +53,7 @@ fakeUTCTime = UTCTime (fromGregorian 1 1 1) 0
 foo :: SqlPersistT IO ()
 foo = do
     insert User
-        { userName = "Matt von Hagen"
+        { userName = "Matt Parsons"
         , userBirthday = fromGregorian 1988 09 29
         , userCreatedAt = fakeUTCTime
         , userUpdateAt =  fakeUTCTime
@@ -89,7 +89,7 @@ mkPersist sqlSettings [persistLowerCase|
 foo :: SqlPersistT IO ()
 foo = do
     insert InsertUser
-        { insertUserName = "Matt von Hagen"
+        { insertUserName = "Matt Parsons"
         , insertUserBirthday = fromGregorian 1988 09 29
         }
 ```
